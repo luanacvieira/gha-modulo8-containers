@@ -12,6 +12,8 @@ jobs:
   test:
     environment: Teste
     runs-on: ubuntu-latest
+    container:
+      image: node:16
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb+srv
       MONGODB_CLUSTER_ADDRESS: cluster1.ewyk0pb.mongodb.net
