@@ -15,10 +15,10 @@ jobs:
     container:
       image: node:16
     env:
-      MONGODB_CONNECTION_PROTOCOL: mongodb+srv
-      MONGODB_CLUSTER_ADDRESS: cluster1.ewyk0pb.mongodb.net
-      MONGODB_USERNAME: root # ${{ secrets.MONGODB_USERNAME }}
-      MONGODB_PASSWORD: example # ${{ secrets.MONGODB_PASSWORD }}
+      MONGODB_CONNECTION_PROTOCOL: mongodb # mongodb+srv
+      MONGODB_CLUSTER_ADDRESS: mongodb     # cluster1.ewyk0pb.mongodb.net
+      MONGODB_USERNAME: root               # ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: example            # ${{ secrets.MONGODB_PASSWORD }}
       PORT: 8080
     services:
       mongodb:
@@ -26,7 +26,7 @@ jobs:
         ports:
           - 27017:27017
         env:
-          MONGO_INITDB_ROOT_USERNAME: root # ${{ secrets.MONGODB_USERNAME }}
+          MONGO_INITDB_ROOT_USERNAME: root    # ${{ secrets.MONGODB_USERNAME }}
           MONGO_INITDB_ROOT_PASSWORD: example # ${{ secrets.MONGODB_PASSWORD }}
           # MONGO_INITDB_DATABASE: ${{ env.MONGODB_DB_NAME }}
     steps:
