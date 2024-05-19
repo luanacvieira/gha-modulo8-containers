@@ -4,12 +4,13 @@ on:
     branches:
       - main
       - dev
+      - master
 env:
   CACHE_KEY: node-deps
   MONGODB_DB_NAME: gha-demo
 jobs:
   test:
-    environment: testing
+    environment: Teste
     runs-on: ubuntu-latest
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb+srv
